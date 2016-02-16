@@ -18,7 +18,7 @@
      <h1> {{ product.name | uppercase }} </h1>
      <h2> {{ product.price | currency:"&pound;" }} </h2>
      <p> {{ product.description }} </p>
-     <img ng-src="{{product.images[0].thumb}}"/>
+     <img ng-show="product.images.length" ng-src="{{product.images[0].thumb}}"/>
      <button ng-show="product.canPurchase"> Add to Cart </button>
   </div>
 </body>
