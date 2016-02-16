@@ -1,15 +1,13 @@
 (function() {
-  var gem = {
-    name: 'Dodecahedron',
-    price: 2.95,
-    description: 'Has lots of side',
-  }
   var app = angular.module('gemStore', []);
 
-  app.controller('StoreController', function() {
-    this.product = gem;
+  app.controller('StoreController', function(){
+    this.products = gems;
   });
 
-
-
+  var gems = [
+    { name: 'Azurite', price: 2.95, canPurchase: true, soldOut: false },
+    { name: 'Bloodstone', price: 5.95, canPurchase: true, soldOut: false },
+    { name: 'Zircon', price: 3.95, canPurchase: true, soldOut: false }
+  ];
 })();
